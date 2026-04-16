@@ -188,10 +188,26 @@ button {
   gap: 5px;
   width: 42px;
   height: 42px;
+  cursor: pointer;
   border-radius: 999px;
   border: 1px solid var(--line);
   background: var(--white);
   color: var(--text);
+  transition: transform 160ms ease, background-color 160ms ease, border-color 160ms ease, color 160ms ease,
+    box-shadow 160ms ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+  background: var(--panel);
+  border-color: rgba(0, 0, 0, 0.16);
+  color: var(--accent);
+  transform: translateY(-1px);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nav-toggle:focus-visible {
+  outline: none;
 }
 
 .nav-toggle span {
