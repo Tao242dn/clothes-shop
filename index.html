@@ -4,11 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SHOP.CO</title>
+    <link rel="preload" as="image" href="assets/images/hero-models.jpg" fetchpriority="high" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
     <div class="site-shell">
-      <!-- Site chrome -->
+      <!-- Site page -->
       <div class="promo-bar">
         <p>
           Sign up and get 20% off to your first order.
@@ -19,9 +20,21 @@
 
       <!-- Primary header -->
       <header class="header container">
+        <button
+          class="nav-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Open navigation menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
         <h1 class="logo">SHOP.CO</h1>
 
-        <nav class="nav">
+        <nav class="nav" id="site-nav">
           <a href="/">Shop</a>
           <a href="/">On Sale</a>
           <a href="/">New Arrivals</a>
@@ -80,6 +93,9 @@
             <div class="hero__art" aria-hidden="true">
               <img
                 src="assets/images/hero-models.jpg"
+                width="2730"
+                height="4096"
+                fetchpriority="high"
                 alt=""
               />
             </div>
@@ -106,7 +122,7 @@
           <div class="product-grid">
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/product-tshirt-tape.png" alt="T-Shirt with Tape Details" />
+                <img src="assets/images/product-tshirt-tape.png" width="1920" height="2880" loading="lazy" decoding="async" alt="T-Shirt with Tape Details" />
               </div>
               <h3>T-Shirt with Tape Details</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.5/5</span></p>
@@ -115,7 +131,7 @@
 
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/product-skinny-jeans.png" alt="Skinny Fit Jeans" />
+                <img src="assets/images/product-skinny-jeans.png" width="1920" height="2880" loading="lazy" decoding="async" alt="Skinny Fit Jeans" />
               </div>
               <h3>Skinny Fit Jeans</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9734;&#9734; <span>3.5/5</span></p>
@@ -128,7 +144,7 @@
 
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/product-checkered-shirt.png" alt="Checkered Shirt" />
+                <img src="assets/images/product-checkered-shirt.png" width="1920" height="2880" loading="lazy" decoding="async" alt="Checkered Shirt" />
               </div>
               <h3>Checkered Shirt</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.5/5</span></p>
@@ -137,7 +153,7 @@
 
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/product-sleeve-striped-tshirt.png" alt="Sleeve Striped T-Shirt" />
+                <img src="assets/images/product-sleeve-striped-tshirt.png" width="1920" height="2880" loading="lazy" decoding="async" alt="Sleeve Striped T-Shirt" />
               </div>
               <h3>Sleeve Striped T-Shirt</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.5/5</span></p>
@@ -163,7 +179,7 @@
           <div class="product-grid">
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/style-casual.png" alt="Vertical Striped Shirt" />
+                <img src="assets/images/style-casual.png" width="1920" height="2880" loading="lazy" decoding="async" alt="Vertical Striped Shirt" />
               </div>
               <h3>Vertical Striped Shirt</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9733; <span>5.0/5</span></p>
@@ -176,7 +192,7 @@
 
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/style-party.png" alt="Courage Graphic T-Shirt" />
+                <img src="assets/images/style-party.png" width="1920" height="2880" loading="lazy" decoding="async" alt="Courage Graphic T-Shirt" />
               </div>
               <h3>Courage Graphic T-Shirt</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.0/5</span></p>
@@ -185,7 +201,7 @@
 
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/style-formal.png" alt="Loose Fit Bermuda Shorts" />
+                <img src="assets/images/style-formal.png" width="1920" height="2880" loading="lazy" decoding="async" alt="Loose Fit Bermuda Shorts" />
               </div>
               <h3>Loose Fit Bermuda Shorts</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9734;&#9734; <span>3.0/5</span></p>
@@ -194,7 +210,7 @@
 
             <article class="product-card">
               <div class="product-card__media">
-                <img src="assets/images/style-gym.png" alt="Faded Skinny Jeans" />
+                <img src="assets/images/style-gym.png" width="1920" height="2880" loading="lazy" decoding="async" alt="Faded Skinny Jeans" />
               </div>
               <h3>Faded Skinny Jeans</h3>
               <p class="rating">&#9733;&#9733;&#9733;&#9733;&#9734; <span>4.5/5</span></p>
@@ -217,19 +233,19 @@
             <div class="styles-grid">
               <article class="style-tile style-tile--casual">
                 <span>Casual</span>
-                <img src="assets/images/product-vertical-striped-shirt.png" alt="Casual style" />
+                <img src="assets/images/product-vertical-striped-shirt.png" width="826" height="620" loading="lazy" decoding="async" alt="Casual style" />
               </article>
               <article class="style-tile style-tile--formal">
                 <span>Formal</span>
-                <img src="assets/images/product-bermuda-shorts.png" alt="Formal style" />
+                <img src="assets/images/product-bermuda-shorts.png" width="900" height="600" loading="lazy" decoding="async" alt="Formal style" />
               </article>
               <article class="style-tile style-tile--party">
                 <span>Party</span>
-                <img src="assets/images/product-faded-jeans.png" alt="Party style" />
+                <img src="assets/images/product-faded-jeans.png" width="826" height="660" loading="lazy" decoding="async" alt="Party style" />
               </article>
               <article class="style-tile style-tile--gym">
                 <span>Gym</span>
-                <img src="assets/images/product-courage-graphic-tshirt.png" alt="Gym style" />
+                <img src="assets/images/product-courage-graphic-tshirt.png" width="740" height="1110" loading="lazy" decoding="async" alt="Gym style" />
               </article>
             </div>
           </div>
@@ -361,5 +377,30 @@
         </div>
       </footer>
     </div>
+    <script>
+      const header = document.querySelector(".header");
+      const navToggle = document.querySelector(".nav-toggle");
+
+      if (header && navToggle) {
+        const mobileQuery = window.matchMedia("(max-width: 1180px)");
+
+        const syncMenuState = () => {
+          if (!mobileQuery.matches) {
+            header.classList.remove("menu-open");
+            navToggle.setAttribute("aria-expanded", "false");
+            navToggle.setAttribute("aria-label", "Open navigation menu");
+          }
+        };
+
+        navToggle.addEventListener("click", () => {
+          const isOpen = header.classList.toggle("menu-open");
+          navToggle.setAttribute("aria-expanded", String(isOpen));
+          navToggle.setAttribute("aria-label", isOpen ? "Close navigation menu" : "Open navigation menu"
+          );
+        });
+
+        mobileQuery.addEventListener("change", syncMenuState);
+      }
+    </script>
   </body>
 </html>
